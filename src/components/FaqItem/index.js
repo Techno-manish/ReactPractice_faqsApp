@@ -31,8 +31,12 @@ class FaqItem extends Component {
             onClick={this.setHidden}
           />
         </div>
-        <hr />
-        <p className="answerText">{!isHidden && answerText}</p>
+        {!isHidden && (
+          <div>
+            <hr />
+            <p className="answerText">{answerText}</p>
+          </div>
+        )}
       </li>
     )
   }
